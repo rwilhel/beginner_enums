@@ -4,7 +4,9 @@ require './lib/dealer'
 require './lib/car'
 
 class DealerTest < Minitest::Test
+
 attr_reader :dealer, :navy_bean, :red_panther, :green_dragon, :pink_butterfly
+  
   def setup
     @dealer = Dealer.new
     @navy_bean = Car.new(2010, "Nissan")
@@ -12,12 +14,10 @@ attr_reader :dealer, :navy_bean, :red_panther, :green_dragon, :pink_butterfly
     @green_dragon = Car.new(1999, "Honda")
     @pink_butterfly = Car.new(2000, "Nissan")
 
-
     dealer.add_inventory(navy_bean)
     dealer.add_inventory(red_panther)
     dealer.add_inventory(green_dragon)
     dealer.add_inventory(pink_butterfly)
-
   end
 
   def test_dealer_class_exists
